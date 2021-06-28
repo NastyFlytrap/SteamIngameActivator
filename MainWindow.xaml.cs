@@ -26,23 +26,49 @@ namespace SteamIngameActivator
         {
             InitializeComponent();
         }
+
         private void Buttonopentxt(object sender, RoutedEventArgs e)
-        {            
-            OpenFileDialog openFileDialog = new OpenFileDialog();
+        {
+                        OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == true)
             {
                 
-                txtEditor.Text = File.ReadAllText(openFileDialog.FileName);
+                txtopener.Text = File.ReadAllText(openFileDialog.FileName);
             }
             
             openFileDialog.Filter = "Text files (*.txt)|*.txt"; //Thanks https://wpf-tutorial.com/dialogs/the-openfiledialog/ !
         }
+
         private void Buttonsavetxt(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             if (saveFileDialog.ShowDialog() == true)
             {
                 File.WriteAllText(saveFileDialog.FileName, txtEditor.Text);
+            }
+        }
+
+        private void Buttonfindexe(object sender, RoutedEventArgs e)
+        {
+            // Create OpenFileDialog 
+            OpenFileDialog dlg = new OpenFileDialog
+            {
+                // Set filter for file extension and default file extension 
+                DefaultExt = ".exe",
+                Filter = "EXE Files (*.exe)|*.exe"
+            };
+
+
+            // Display OpenFileDialog by calling ShowDialog method 
+            bool? result = dlg.ShowDialog();
+
+
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                Exelocation.Text = filename;
             }
         }
 
