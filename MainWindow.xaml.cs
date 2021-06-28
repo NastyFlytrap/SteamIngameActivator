@@ -24,8 +24,19 @@ namespace SteamIngameActivator
     {
         public MainWindow()
         {
-            ;
+            InitializeComponent();
         }
-       
+        private void Buttonopentxt(object sender, RoutedEventArgs e)
+        {            
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                
+                txtEditor.Text = File.ReadAllText(openFileDialog.FileName);
+            }
+            
+            openFileDialog.Filter = "Text files (*.txt)|*.txt"; //Thanks https://wpf-tutorial.com/dialogs/the-openfiledialog/ !
+        }
+        
     }
 }
