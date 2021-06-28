@@ -6,18 +6,29 @@
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         xmlns:local="clr-namespace:Activator"
         mc:Ignorable="d"
-        Title="Steam In-game Activator" Width="520" Height="200">
-    <Grid Margin="0,0,0,0">
-        <TextBox HorizontalAlignment="Left" Height="20" Margin="10,20,0,0" TextWrapping="Wrap"   
-                 Text="TextBox" VerticalAlignment="Top" Width="374" Name="FileNameTextBox"/>
-        <Button x:Name="BrowseButton_Click" Content="Browse a file" HorizontalAlignment="Left"   
-                Margin="389,10,0,0" VerticalAlignment="Top" Width="121" Click="BrowseButton_Click"   
-                RenderTransformOrigin="1.047,0.821" Height="40"/>
-        <TextBox HorizontalAlignment="Center" Height="119" Margin="0,55,0,0"   
-                   TextWrapping="Wrap" VerticalAlignment="Top"  
-                   Width="500" Name="TextBlock1" Text="AppID" Visibility="Hidden"/>
-        <Button Content="Accept" HorizontalAlignment="Center" Margin="0,107,0,0" VerticalAlignment="Top" Height="20" Width="50" Click="Button_Click"/>
+        Title="Steam In-game Activator" Width="520" Height="240">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+        </Grid.RowDefinitions>
+        <TextBox HorizontalAlignment="Left" Margin="10,16,0,16" TextWrapping="Wrap" Grid.Row="0" 
+                 Text="TextBox" Width="363" Height="20" Name="FileNameTextBox1"/>
+        <Button x:Name="BrowseButton_Click" Content="Find Steam_appid.txt" HorizontalAlignment="Left" Grid.Row="0"  
+                 Width="121" Height="30" Click="BrowseButton_Click" Margin="389,10,0,10" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="10,16,0,16" TextWrapping="Wrap" Grid.Row="1" 
+                 Text="TextBox" Width="363" Height="20" Name="FileNameTextBox2"/>
+        <Button x:Name="Button2" Content="Save AppID" HorizontalAlignment="Left" Grid.Row="1"
+                 Width="121" Height="30" Click="BrowseButton_Click" Margin="389,10,0,10" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="10,16,0,16" TextWrapping="Wrap" Grid.Row="2" 
+                 Text="TextBox" Width="363" Height="20" Name="FileNameTextBox3"/>
+        <Button x:Name="Button3" Content="Browse for exe" HorizontalAlignment="Left" Grid.Row="2"
+                 Width="121" Height="30" Click="BrowseButton_Click" Margin="389,10,0,10" VerticalAlignment="Top"/>        
+        <Button x:Name="Button4" Content="Launch Activator" HorizontalAlignment="Center" Grid.Row="3"
+                 Width="121" Height="30" Click="BrowseButton_Click" Margin="0,0,0,0" VerticalAlignment="Center"/>
+
         <!--Thanks to https://www.c-sharpcorner.com/uploadfile/mahesh/openfiledialog-in-wpf/ for the text box code!-->
     </Grid>
-
 </Window>

@@ -24,24 +24,8 @@ namespace SteamIngameActivator
     {
         public MainWindow()
         {
-          InitializeComponent();
+            ;
         }
-        private void BrowseButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Create OpenFileDialog
-            OpenFileDialog opentxt;
-            OpenFileDialog openFileDialog = new();
-            OpenFileDialog openFileDlg = openFileDialog;
-
-            // Launch OpenFileDialog by calling ShowDialog method
-            Nullable<bool> result = openFileDlg.ShowDialog();
-            // Get the selected file name and display in a TextBox.
-            // Load content of file in a TextBlock
-            if (result == true)
-            {
-                FileNameTextBox.Text = openFileDlg.FileName;
-                TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
-            }
-        }
+       
     }
 }
