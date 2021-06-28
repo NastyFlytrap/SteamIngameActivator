@@ -29,10 +29,10 @@
         <TextBox HorizontalAlignment="Left" Margin="10,16,0,16" TextWrapping="Wrap" Grid.Row="2" 
                  Text="EXE location" Width="363" Height="20" Name="Exelocation" IsReadOnly="True"/>
 
-        <Button x:Name="Button3" Content="Browse for exe" HorizontalAlignment="Left" Grid.Row="2"
+        <Button x:Name="Browseexe" Content="Browse for exe" HorizontalAlignment="Left" Grid.Row="2"
                  Width="121" Height="30" Click="Buttonfindexe" Margin="389,10,0,12" VerticalAlignment="Top"/>
 
-        <Button x:Name="Button4" Content="Launch Steam In-game Activator" HorizontalAlignment="Center" Grid.Row="3"
+        <Button x:Name="Launch" Content="Launch Steam In-game Activator" HorizontalAlignment="Center" Grid.Row="3"
                  Width="180" Height="30" Click="Launchactivator" Margin="0,0,0,0" VerticalAlignment="Center"/> <!-- Save cfg, launch exe, close window, in that order-->
 
         <!--Thanks to https://www.c-sharpcorner.com/uploadfile/mahesh/openfiledialog-in-wpf/ for the text box code!-->
