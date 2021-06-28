@@ -1,0 +1,23 @@
+﻿<Window x:Name="Steam_InGame_Activator" x:Class="Activator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:local="clr-namespace:Activator"
+        mc:Ignorable="d"
+        Title="Steam In-game Activator" Width="520" Height="200">
+    <Grid Margin="0,0,0,0">
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="10,20,0,0" TextWrapping="Wrap"   
+                 Text="TextBox" VerticalAlignment="Top" Width="374" Name="FileNameTextBox"/>
+        <Button x:Name="BrowseButton_Click" Content="Browse a file" HorizontalAlignment="Left"   
+                Margin="389,10,0,0" VerticalAlignment="Top" Width="121" Click="BrowseButton_Click"   
+                RenderTransformOrigin="1.047,0.821" Height="40"/>
+        <TextBox HorizontalAlignment="Center" Height="119" Margin="0,55,0,0"   
+                   TextWrapping="Wrap" VerticalAlignment="Top"  
+                   Width="500" Name="TextBlock1" Text="AppID" Visibility="Hidden"/>
+        <Button Content="Accept" HorizontalAlignment="Center" Margin="0,107,0,0" VerticalAlignment="Top" Height="20" Width="50" Click="Button_Click"/>
+        <!--Thanks to https://www.c-sharpcorner.com/uploadfile/mahesh/openfiledialog-in-wpf/ for the text box code!-->
+    </Grid>
+
+</Window>
