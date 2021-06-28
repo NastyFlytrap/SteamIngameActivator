@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -29,19 +30,28 @@ namespace SteamIngameActivator
 
         private void Buttonopentxt(object sender, RoutedEventArgs e)
         {
-                        OpenFileDialog openFileDialog = new OpenFileDialog();
+            OpenFileDialog openFileDialog = new OpenFileDialog 
+            {
+                DefaultExt = ".txt",
+                Filter = "Text Files (*.txt)|*.txt"
+            };
             if (openFileDialog.ShowDialog() == true)
             {
                 
                 txtopener.Text = File.ReadAllText(openFileDialog.FileName);
+                openFileDialog.Filter = "Text files (*.txt)|*.txt"; //Thanks https://wpf-tutorial.com/dialogs/the-openfiledialog/ !
             }
             
-            openFileDialog.Filter = "Text files (*.txt)|*.txt"; //Thanks https://wpf-tutorial.com/dialogs/the-openfiledialog/ !
+           
         }
 
         private void Buttonsavetxt(object sender, RoutedEventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            SaveFileDialog saveFileDialog = new SaveFileDialog
+            {
+                DefaultExt = ".txt",
+                Filter = "Text Files (*.txt)|*.txt"
+            };           
             if (saveFileDialog.ShowDialog() == true)
             {
                 File.WriteAllText(saveFileDialog.FileName, txtEditor.Text);
@@ -51,7 +61,7 @@ namespace SteamIngameActivator
         private void Buttonfindexe(object sender, RoutedEventArgs e)
         {
             // Create OpenFileDialog 
-            OpenFileDialog dlg = new OpenFileDialog
+            OpenFileDialog exe = new OpenFileDialog
             {
                 // Set filter for file extension and default file extension 
                 DefaultExt = ".exe",
@@ -60,17 +70,23 @@ namespace SteamIngameActivator
 
 
             // Display OpenFileDialog by calling ShowDialog method 
-            bool? result = dlg.ShowDialog();
+            bool? result = exe.ShowDialog();
 
 
             // Get the selected file name and display in a TextBox 
             if (result == true)
             {
                 // Open document 
-                string filename = dlg.FileName;
+                string filename = exe.FileName;
                 Exelocation.Text = filename;
             }
         }
-
+     
+        private void Launchactivator(object sender, RoutedEventArgs e)
+        {
+            
+            String gamelocation = Exelocation.Text;            
+            Process.Start(gamelocation);
+        }
     }
 }

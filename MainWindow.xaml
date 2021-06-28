@@ -6,7 +6,7 @@
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         xmlns:local="clr-namespace:SteamIngameActivator"
         mc:Ignorable="d"
-        Title="Steam In-game Activator" Width="520" Height="240">
+        Title="Steam In-game Activator" Width="520" Height="248">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60*"/>
@@ -18,19 +18,19 @@
                  Text="Old AppID" Width="363" Height="20" Name="txtopener" IsReadOnly="True"/>
 
         <Button x:Name="Opentxt" Content="Find Steam_appid.txt" HorizontalAlignment="Left" Grid.Row="0"  
-                 Width="121" Height="30" Click="Buttonopentxt" Margin="389,10,0,10" VerticalAlignment="Top"/>
+                 Width="121" Height="30" Click="Buttonopentxt" Margin="389,10,0,12" VerticalAlignment="Top"/>
         
         <TextBox HorizontalAlignment="Left" Margin="10,16,0,16" TextWrapping="Wrap" Grid.Row="1" 
-                 Text="New AppID" Width="363" Height="20" Name="txtEditor" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                 Text="New AppID" Width="363" Height="20" Name="txtEditor" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Auto" RenderTransformOrigin="0.5,0.5"/>
 
         <Button x:Name="Savetxt" Content="Save AppID" HorizontalAlignment="Left" Grid.Row="1"                
-                 Width="121" Height="30" Click="Buttonsavetxt" Margin="389,10,0,10" VerticalAlignment="Top"/>
+                 Width="121" Height="30" Click="Buttonsavetxt" Margin="389,10,0,12" VerticalAlignment="Top"/>
         
         <TextBox HorizontalAlignment="Left" Margin="10,16,0,16" TextWrapping="Wrap" Grid.Row="2" 
                  Text="EXE location" Width="363" Height="20" Name="Exelocation" IsReadOnly="True"/>
 
         <Button x:Name="Button3" Content="Browse for exe" HorizontalAlignment="Left" Grid.Row="2"
-                 Width="121" Height="30" Click="Buttonfindexe" Margin="389,10,0,10" VerticalAlignment="Top"/>
+                 Width="121" Height="30" Click="Buttonfindexe" Margin="389,10,0,12" VerticalAlignment="Top"/>
 
         <Button x:Name="Button4" Content="Launch Steam In-game Activator" HorizontalAlignment="Center" Grid.Row="3"
                  Width="180" Height="30" Click="Launchactivator" Margin="0,0,0,0" VerticalAlignment="Center"/> <!-- Save cfg, launch exe, close window, in that order-->
