@@ -7,4 +7,4 @@ Compiled with Visual studio 2019, .NET Framework 4.8 (although you shouldnt need
 
 1.0 is DONE!
 Graphical flair coming soon!
-Also, binaries. Lets not forget about those....
+Binaries ADDED!
