@@ -20,10 +20,20 @@ namespace SteamIngameActivator
         {
             string[] paths = { Environment.CurrentDirectory, "Settings.cfg" };
             string fullpath = Path.Combine(paths);
-            string[] lines = File.ReadAllLines(fullpath);
-            txtopener.Text = lines[0];
-            Exelocation.Text = lines[1];
+            if (!File.Exists(fullpath))
+            {
+                
+                
+            }
+            else if (File.Exists(fullpath))
+            {
+                string[] lines = File.ReadAllLines(fullpath);
+                txtopener.Text = lines[0];
+                idlocation.Text = lines[1];
+                Exelocation.Text = lines[2];
+            }
             
+
         }
 
         //private void testy(object sender, RoutedEventArgs e)
@@ -36,6 +46,7 @@ namespace SteamIngameActivator
         //}
 
         //add loading of the .cfg!
+
         private void Buttonopentxt(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog 
@@ -96,6 +107,7 @@ namespace SteamIngameActivator
             {
                 TextWriter tw = new StreamWriter(fullpath2);
                 tw.WriteLine(txtopener.Text);
+                tw.WriteLine(idlocation.Text);
                 tw.WriteLine(Exelocation.Text);
                 tw.Close();
             }
@@ -103,6 +115,7 @@ namespace SteamIngameActivator
             {
                 TextWriter tw = new StreamWriter(fullpath2);
                 tw.WriteLine(txtopener.Text);
+                tw.WriteLine(idlocation.Text);
                 tw.WriteLine(Exelocation.Text);
                 tw.Close();
             }

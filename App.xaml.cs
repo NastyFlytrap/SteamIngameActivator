@@ -9,10 +9,6 @@ namespace SteamIngameActivator
     /// </summary>
     public partial class App : Application
     {
-        public void App_Startup(object sender, StartupEventArgs e)
-        {
-            
-            
-        }
+        
     }
 }
