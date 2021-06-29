@@ -1,7 +1,10 @@
 # SteamIngameActivator
 Im still learning how to code, if you see this, i'd welcome some help :(
 
-The goal is to create an application that works without the need of installing any .net, like how any lightweight application should work nowadays
-With the ability to read steam_appid.txt, change its contents in the same window, save the edited txt file, then select the game exe, and launch it with another button
+Steam In-Game Activator is here! Its simple, but great!
+It saves your settings into a settings.cfg right next to the exe, so you dont even have to type them in later!
 
-Also, save the locations of the txt and exe files, so on further launches you only have to type in a new ID and thats it
+Compiled with Visual studio 2019, .NET Framework 4.8 (although you shouldnt need .NET to run it....)
+
+1.0, with some addid graphical flare, is coming soon!
+Also, binaries. Lets not forget about those....
