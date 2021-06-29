@@ -8,7 +8,7 @@
         Title="subwindow" Height="150" Width="200">
     <Grid Margin="0,0,595,286">
         <TextBlock HorizontalAlignment="Left" Margin="49,31,-146,-49" TextWrapping="Wrap" Text="Saved the AppID!" VerticalAlignment="Top" Height="18" Width="97"/>
-        <Button Content="Close" IsCancel="True" Command="ApplicationCommands.Close" HorizontalAlignment="Left" Height="21" Margin="49,74,-146,-95" VerticalAlignment="Top" Width="97"/>
+        <Button Content="Close" Click="Closewindow" HorizontalAlignment="Left" Height="21" Margin="49,74,-146,-95" VerticalAlignment="Top" Width="97"/>
 
     </Grid>
 </Window>

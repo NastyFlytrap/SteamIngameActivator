@@ -23,7 +23,7 @@ namespace SteamIngameActivator
         {
             InitializeComponent();
         }
-        private void CloseCommandHandler(object sender, ExecutedRoutedEventArgs e)
+        private void Closewindow(object sender, RoutedEventArgs e)
         {
             this.Close();
         }

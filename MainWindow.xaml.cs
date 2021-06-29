@@ -50,7 +50,7 @@ namespace SteamIngameActivator
         {
 
             File.WriteAllText(idlocation.Text, txtEditor.Text);
-            subwindow subWindow = new subwindow();
+            subwindow subWindow = new subwindow(); //Create new window
             subWindow.Show();
         }
 
