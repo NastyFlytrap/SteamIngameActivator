@@ -6,5 +6,4 @@ It saves your settings into a settings.cfg right next to the exe, so you dont ev
 Compiled with Visual studio 2019, .NET Framework 4.8 (although you shouldnt need .NET to run it....)
 
 1.0 is DONE!
-Graphical flair coming soon!
-Binaries ADDED!
+Graphical flair coming soon! Binaries ADDED!
