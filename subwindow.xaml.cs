@@ -25,7 +25,7 @@ namespace SteamIngameActivator
         }
         private void Closewindow(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            this.Close(); //close window
         }
     }
 }
