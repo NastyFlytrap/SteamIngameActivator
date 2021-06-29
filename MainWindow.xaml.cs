@@ -11,10 +11,30 @@ namespace SteamIngameActivator
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
         }
+        private void Window_Startup(object sender, RoutedEventArgs e)
+        {
+            string[] paths = { Environment.CurrentDirectory, "Settings.cfg" };
+            string fullpath = Path.Combine(paths);
+            string[] lines = File.ReadAllLines(fullpath);
+            txtopener.Text = lines[0];
+            Exelocation.Text = lines[1];
+            
+        }
+
+        //private void testy(object sender, RoutedEventArgs e)
+        //{
+        //    string[] paths = { Environment.CurrentDirectory, "Settings.cfg" };
+        //    string fullpath = Path.Combine(paths);
+        //    string[] lines = File.ReadAllLines(fullpath);
+        //    txtopener.Text = lines[0];
+        //    Exelocation.Text = lines[1];
+        //}
+
         //add loading of the .cfg!
         private void Buttonopentxt(object sender, RoutedEventArgs e)
         {
@@ -39,7 +59,7 @@ namespace SteamIngameActivator
 
             File.WriteAllText(idlocation.Text, txtEditor.Text);
             Subwindow subWindow = new Subwindow(); //Create new window
-            subWindow.Show();
+            subWindow.ShowDialog();
         }
 
         private void Buttonfindexe(object sender, RoutedEventArgs e)
@@ -70,18 +90,18 @@ namespace SteamIngameActivator
 
         private void Launchactivator(object sender, RoutedEventArgs e)
         {
-            string[] paths = {Environment.CurrentDirectory, "Settings.cfg" };
-            string fullpath = Path.Combine(paths);
-            if (!File.Exists(fullpath))
+            string[] paths2 = {Environment.CurrentDirectory, "Settings.cfg" };
+            string fullpath2 = Path.Combine(paths2);
+            if (!File.Exists(fullpath2))
             {
-                TextWriter tw = new StreamWriter(fullpath);
+                TextWriter tw = new StreamWriter(fullpath2);
                 tw.WriteLine(txtopener.Text);
                 tw.WriteLine(Exelocation.Text);
                 tw.Close();
             }
-            else if (File.Exists(fullpath))
+            else if (File.Exists(fullpath2))
             {
-                TextWriter tw = new StreamWriter(fullpath);
+                TextWriter tw = new StreamWriter(fullpath2);
                 tw.WriteLine(txtopener.Text);
                 tw.WriteLine(Exelocation.Text);
                 tw.Close();
