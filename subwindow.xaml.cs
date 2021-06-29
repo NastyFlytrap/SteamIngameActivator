@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace SteamIngameActivator
 {
     /// <summary>
-    /// Interaction logic for subwindow.xaml
+    /// Interaction logic for Subwindow.xaml
     /// </summary>
-    public partial class subwindow : Window
+    public partial class Subwindow : Window
     {
-        public subwindow()
+        public Subwindow()
         {
             InitializeComponent();
         }

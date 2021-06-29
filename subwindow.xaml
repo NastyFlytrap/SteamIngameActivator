@@ -1,11 +1,12 @@
-﻿<Window x:Class="SteamIngameActivator.subwindow"
+﻿<Window x:Class="SteamIngameActivator.Subwindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SteamIngameActivator"
         mc:Ignorable="d"
-        Title="subwindow" Height="150" Width="200">
+        ResizeMode="NoResize"
+        Title="Successful Save!" Height="150" Width="200">
     <Grid Margin="0,0,595,286">
         <TextBlock HorizontalAlignment="Left" Margin="49,31,-146,-49" TextWrapping="Wrap" Text="Saved the AppID!" VerticalAlignment="Top" Height="18" Width="97"/>
         <Button Content="Close" Click="Closewindow" HorizontalAlignment="Left" Height="21" Margin="49,74,-146,-95" VerticalAlignment="Top" Width="97"/>

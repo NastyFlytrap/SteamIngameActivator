@@ -50,7 +50,7 @@ namespace SteamIngameActivator
         {
 
             File.WriteAllText(idlocation.Text, txtEditor.Text);
-            subwindow subWindow = new subwindow(); //Create new window
+            Subwindow subWindow = new Subwindow(); //Create new window
             subWindow.Show();
         }
 
@@ -83,6 +83,7 @@ namespace SteamIngameActivator
             
             String gamelocation = Exelocation.Text;            
             Process.Start(gamelocation);
+            this.Close(); //close window
         }
     }
 }
