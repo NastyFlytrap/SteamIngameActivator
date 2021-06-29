@@ -1,20 +1,8 @@
 ﻿using System;
 using System.IO;
 using Microsoft.Win32;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace SteamIngameActivator
 {
@@ -27,7 +15,7 @@ namespace SteamIngameActivator
         {
             InitializeComponent();
         }
-
+        //add loading of the .cfg!
         private void Buttonopentxt(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog 
@@ -77,10 +65,28 @@ namespace SteamIngameActivator
                 Exelocation.Text = filename;
             }
         }
-     
+
+       
+
         private void Launchactivator(object sender, RoutedEventArgs e)
         {
-            
+            string[] paths = {Environment.CurrentDirectory, "Settings.cfg" };
+            string fullpath = Path.Combine(paths);
+            if (!File.Exists(fullpath))
+            {
+                TextWriter tw = new StreamWriter(fullpath);
+                tw.WriteLine(txtopener.Text);
+                tw.WriteLine(Exelocation.Text);
+                tw.Close();
+            }
+            else if (File.Exists(fullpath))
+            {
+                TextWriter tw = new StreamWriter(fullpath);
+                tw.WriteLine(txtopener.Text);
+                tw.WriteLine(Exelocation.Text);
+                tw.Close();
+            }
+            //take old appid and exe location, take their values from the textboxes, convert to string, when final button is pressed make it save a .cfg in the same folder as itself
             String gamelocation = Exelocation.Text;            
             Process.Start(gamelocation);
             this.Close(); //close window
