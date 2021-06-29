@@ -37,7 +37,8 @@ namespace SteamIngameActivator
             };
             if (openFileDialog.ShowDialog() == true)
             {
-                
+                string applocation = openFileDialog.FileName;
+                idlocation.Text = applocation;
                 txtopener.Text = File.ReadAllText(openFileDialog.FileName);
                 openFileDialog.Filter = "Text files (*.txt)|*.txt"; //Thanks https://wpf-tutorial.com/dialogs/the-openfiledialog/ !
             }
@@ -47,15 +48,10 @@ namespace SteamIngameActivator
 
         private void Buttonsavetxt(object sender, RoutedEventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog
-            {
-                DefaultExt = ".txt",
-                Filter = "Text Files (*.txt)|*.txt"
-            };           
-            if (saveFileDialog.ShowDialog() == true)
-            {
-                File.WriteAllText(saveFileDialog.FileName, txtEditor.Text);
-            }
+
+            File.WriteAllText(idlocation.Text, txtEditor.Text);
+            subwindow subWindow = new subwindow();
+            subWindow.Show();
         }
 
         private void Buttonfindexe(object sender, RoutedEventArgs e)
