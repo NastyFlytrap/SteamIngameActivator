@@ -29,6 +29,7 @@ namespace SteamIngameActivator
             {
                 string[] lines = File.ReadAllLines(fullpath);
                 txtopener.Text = lines[0];
+                txtEditor.Text = lines[0];
                 idlocation.Text = lines[1];
                 Exelocation.Text = lines[2];
             }
