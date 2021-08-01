@@ -5,9 +5,9 @@ namespace SteamIngameActivator
     /// <summary>
     /// Interaction logic for Subwindow.xaml
     /// </summary>
-    public partial class Subwindow : Window
+    public partial class WindowDark : Window
     {
-        public Subwindow()
+        public WindowDark()
         {
             InitializeComponent();
         }

@@ -97,6 +97,9 @@
     <Compile Include="subwindow.xaml.cs">
       <DependentUpon>subwindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowDark.xaml.cs">
+      <DependentUpon>WindowDark.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -110,6 +113,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="subwindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowDark.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -152,6 +159,13 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="steam.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="greencheckmark.png" />
+    <Resource Include="redcheckmark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

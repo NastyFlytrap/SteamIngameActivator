@@ -4,40 +4,42 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
-        xmlns:local="clr-namespace:SteamIngameActivator"
         mc:Ignorable="d"
         Loaded="Window_Startup"
+        Icon="steam.ico"
         Title="Steam In-game Activator" Width="540" Height="248">
-    <Grid>
+    <Grid x:Name="MainGrid" Background="#1a1a1a">
         <Grid.RowDefinitions>
             <RowDefinition Height="60*"/>
             <RowDefinition Height="60*"/>
             <RowDefinition Height="60*"/>
             <RowDefinition Height="60*"/>
         </Grid.RowDefinitions>
-        <TextBox HorizontalAlignment="Left" Margin="10,16,0,16" TextWrapping="Wrap" Grid.Row="0" 
-                 Text="Old AppID" Width="363" Height="20" Name="txtopener" IsReadOnly="True"/>
+        <TextBox Name="txtopener" Text="Old AppID" HorizontalAlignment="Left" Margin="10,16,0,16" TextWrapping="Wrap" Grid.Row="0"          
+                 Width="363" Height="20"  IsReadOnly="True" Background="#333333" Foreground="#33cc33"/>
 
         <Button x:Name="Opentxt" Content="Find Steam_appid.txt" HorizontalAlignment="Left" Grid.Row="0"  
-                 Width="121" Height="30" Click="Buttonopentxt" Margin="389,10,0,12" VerticalAlignment="Top"/>
+                 Width="121" Height="30" Click="Buttonopentxt" Margin="389,10,0,12" VerticalAlignment="Top" Background="#333333" Foreground="#33cc33"/>
 
-        <TextBox Name="idlocation" HorizontalAlignment="Left" Height="25" Margin="10,17,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Visibility="Hidden" d:IsLocked="True"/>
+        <TextBox Name="txtEditor" Text="New AppID" HorizontalAlignment="Left" Margin="10,16,0,16" TextWrapping="Wrap" Grid.Row="1" 
+                 Width="363" Height="20"  AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Auto" Background="#333333" Foreground="#33cc33"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="10,16,0,16" TextWrapping="Wrap" Grid.Row="1" 
-                 Text="New AppID" Width="363" Height="20" Name="txtEditor" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Auto" RenderTransformOrigin="0.5,0.5"/>
+        <Button x:Name="Savetxt" Content="Save AppID" HorizontalAlignment="Left" Grid.Row="1" Width="121" Height="30" Click="Buttonsavetxt" Margin="389,10,0,12" IsEnabled="False" Background="#333333" Foreground="#33cc33"/>
 
-        <Button x:Name="Savetxt" Content="Save AppID" HorizontalAlignment="Left" Grid.Row="1"                
-                 Width="121" Height="30" Click="Buttonsavetxt" Margin="389,10,0,12" VerticalAlignment="Top"/>
-
-        <TextBox HorizontalAlignment="Left" Margin="10,16,0,16" TextWrapping="Wrap" Grid.Row="2" 
-                 Text="EXE location" Width="363" Height="20" Name="Exelocation" IsReadOnly="True"/>
+        <TextBox Name="Exelocation" Text="EXE location" HorizontalAlignment="Left" Margin="10,16,0,16" TextWrapping="Wrap" Grid.Row="2" 
+                 Width="363" Height="20"  IsReadOnly="True" Background="#333333" Foreground="#33cc33"/>
 
         <Button x:Name="Browseexe" Content="Browse for exe" HorizontalAlignment="Left" Grid.Row="2"
-                 Width="121" Height="30" Click="Buttonfindexe" Margin="389,10,0,12" VerticalAlignment="Top"/>
+                 Width="121" Height="30" Click="Buttonfindexe" Margin="389,10,0,12" VerticalAlignment="Top" Background="#333333" Foreground="#33cc33"/>
 
-        <Button x:Name="Launch" Content="Launch Steam In-game Activator" HorizontalAlignment="Center" Grid.Row="3"
-                 Width="180" Height="30" Click="Launchactivator" Margin="0,0,0,0" VerticalAlignment="Center"/>
+        <TextBox Name="idlocation" HorizontalAlignment="Left" Height="25" Margin="10,17,0,0" TextWrapping="Wrap" Grid.Row="3" 
+                 VerticalAlignment="Top" Width="200" Visibility="Hidden" IsReadOnly="True" d:IsLocked="True" Background="#333333" Foreground="#33cc33"/>
+
+        <Button x:Name="Launch" Content="Launch Steam In-game Activator" Grid.Row="3"
+                 Width="180" Height="30" Click="Launchactivator" Margin="171,8,159,12" Background="#262626" Foreground="#33cc33"/>
+
+        <Button x:Name="Lighty" Content="LightMode" Grid.Row="3" Click="LightMode" Margin="411,10,44,14" Background="#262626" Foreground="#33cc33"/>
+        <CheckBox Name="Light" Content="CheckBox" HorizontalAlignment="Left" Margin="71,17,0,0" Grid.Row="3" VerticalAlignment="Top" Visibility="Hidden"/>
         <!--<Button Content="Button" Click="testy" HorizontalAlignment="Left" Margin="416,17,0,0" Grid.Row="3" VerticalAlignment="Top" Width="75"/>-->
         <!-- Save cfg, launch exe, close window, in that order-->
 
