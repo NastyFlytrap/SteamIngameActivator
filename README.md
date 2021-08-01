@@ -9,7 +9,7 @@ Compiled with Visual studio 2019, .NET Framework 4.8 (although you shouldnt need
 
 Binaries ADDED!
 
-Graphical flair coming soon! 
+Graphical flair ADDED!
 
 To use this, find a game that still uses steam_appid.txt to decide which game you're going to be 'in', these are mostly pre 2013 games when valve switched to using the steamworks API for this purpose.
 
