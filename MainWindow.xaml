@@ -21,8 +21,8 @@
         <Button x:Name="Opentxt" Content="Find Steam_appid.txt" HorizontalAlignment="Left" Grid.Row="0"  
                  Width="121" Height="30" Click="Buttonopentxt" Margin="389,10,0,12" VerticalAlignment="Top" Background="#333333" Foreground="#33cc33"/>
 
-        <TextBox Name="txtEditor" Text="New AppID" HorizontalAlignment="Left" Margin="10,16,0,16" TextWrapping="Wrap" Grid.Row="1" 
-                 Width="363" Height="20"  AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Auto" Background="#333333" Foreground="#33cc33"/>
+        <TextBox Name="txtEditor" Text="New AppID" HorizontalAlignment="Left" Margin="10,16,0,16" Grid.Row="1" 
+                 Width="363" Height="20" Background="#333333" Foreground="#33cc33"/>
 
         <Button x:Name="Savetxt" Content="Save AppID" HorizontalAlignment="Left" Grid.Row="1" Width="121" Height="30" Click="Buttonsavetxt" Margin="389,10,0,12" IsEnabled="False" Background="#333333" Foreground="#33cc33"/>
 
