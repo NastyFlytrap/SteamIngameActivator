@@ -1,5 +1,8 @@
 # SteamIngameActivator
 
+<img width="526" height="241" alt="SteamActivator" src="https://github.com/user-attachments/assets/d1eb752a-312a-4882-a91c-6b29d27eaf84" />
+
+
 Steam In-Game Activator is here! Its simple, but great!
 It saves your settings into a settings.cfg right next to the exe, so you dont even have to type them in later!
 
